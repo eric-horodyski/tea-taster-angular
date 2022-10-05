@@ -32,6 +32,7 @@
       </ion-item>
 
       <div class="error-message">
+        <div>{{errorMessage$ | async}}</div>
         <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
           <div *ngIf="emailInput.errors.email">E-Mail Address must have a valid format</div>
           <div *ngIf="emailInput.errors.required">E-Mail Address is required</div>
